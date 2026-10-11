@@ -26,7 +26,8 @@ const long BAUD_RATE = 2000000;
 // pin levels differ — DRV8825 M0=M1=M2=HIGH, TMC2209 MS1=HIGH/MS2=LOW.
 // Legacy: 16 = TMC2209 MS1=MS2=HIGH, 8 = DRV8825 M0=M1=HIGH. Must match
 // MOTOR_MICROSTEPS in pendulum_env.py and MICROSTEPS in RLControl.ino.
-const int MICROSTEPS = 32;
+// This rig: TMC2209 wired MS1=MS2=HIGH, so 16.
+const int MICROSTEPS = 16;
 const long STEPS_PER_REVOLUTION = 200L * MICROSTEPS;
 const float STEPS_PER_RAD = (float)STEPS_PER_REVOLUTION / (2.0f * (float)PI);
 const float RAD_PER_STEP = (2.0f * (float)PI) / (float)STEPS_PER_REVOLUTION;

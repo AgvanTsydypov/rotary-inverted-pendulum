@@ -98,7 +98,8 @@ PENDULUM_LSB_RAD = 2.0 * math.pi / 4096.0
 # measurement. 1/32 is the one ratio both drivers reach from identical
 # MS-pin levels (DRV8825 M0=H/M1=L/M2=H, TMC2209 MS1=H/MS2=L), so a single
 # wiring and a single policy cover both carriers.
-MOTOR_MICROSTEPS = 32
+# This rig: TMC2209 wired MS1=MS2=HIGH, so 16.
+MOTOR_MICROSTEPS = 16
 MOTOR_STEP_LSB_RAD = 2.0 * math.pi / (200.0 * MOTOR_MICROSTEPS)
 FIRMWARE_VEL_WINDOW_S = 0.008
 # Age of the state snapshot by the time the host acts on it: encoder sample
