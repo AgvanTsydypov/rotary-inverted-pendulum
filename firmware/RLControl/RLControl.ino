@@ -82,7 +82,8 @@
 //     --build-property 'build.extra_flags=-DPOLICY_WEIGHTS_H="policy_weights_rig2_tmc2209_32.h"' \
 //     firmware/RLControl
 #ifndef POLICY_WEIGHTS_H
-#define POLICY_WEIGHTS_H "policy_weights_rig1_tmc2209_32.h"
+// This rig: own student, trained at 1/16 microstepping.
+#define POLICY_WEIGHTS_H "policy_weights_myrig_tmc2209_16.h"
 #endif
 #include POLICY_WEIGHTS_H
 
